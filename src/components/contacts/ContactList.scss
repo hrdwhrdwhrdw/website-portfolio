@@ -1,0 +1,42 @@
+@import '../../utils//styles.scss';
+
+.contacts {
+  &__list {
+    position: fixed;
+    bottom: 0;
+    z-index: 10;
+    &::after {
+      content: "";
+      display: block;
+      width: 1px;
+      height: 90px;
+      margin: 0px auto;
+      background-color: #fff;
+      margin-top: 30px;
+    }
+  }
+  &__item {
+    margin-bottom: 15px;
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
+
+.contact {
+  &__link {
+    svg, path {
+    transition: 0.2s all linear;
+    }
+    
+    &:hover {
+      path {
+        fill: $purple !important;
+      }
+      svg {
+        transform: scale(1.2);
+      }
+    }
+  }
+} 

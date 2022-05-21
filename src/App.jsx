@@ -2,7 +2,10 @@ import { useState } from "react";
 import { HashRouter } from "react-router-dom";
 import "./App.scss";
 import BackgroundLayout from "./components/background/BackgroundLayout";
+import ContactList from "./components/contacts/ContactList";
+import AboutPage from "./pages/about-page/AboutPage";
 import Header from "./pages/header/Header";
+import Home from "./pages/home-page/Home";
 
 function App() {
   const [mousePosition, setMousePosition] = useState({ x: null, y: null });
@@ -19,11 +22,12 @@ function App() {
         <BackgroundLayout mousePosition={mousePosition} />
         <div className="app__content">
           <Header />
-          {/* <LinkList />  position: fixed */}
+          <ContactList />
           {/* <AnchorLink />  position: fixed */}
-          {/* <Home /> */}
-          {/* <About /> */}
+          <Home />
+          <AboutPage />
           {/* <SkillsPage /> */}
+          {/* <Project /> */}
         </div>
       </div>
     </HashRouter>

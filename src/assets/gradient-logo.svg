@@ -9,6 +9,12 @@ Created by potrace 1.15, written by Peter Selinger 2001-2017
 </metadata>
 <g transform="translate(0.000000,1280.000000) scale(0.100000,-0.100000)"
 fill="#000000" stroke="none">
+<defs>
+        <linearGradient id="MyGradient">
+          <stop offset="5%" stop-color="rgb(115, 95, 247)" />
+          <stop offset="95%" stop-color="rgb(166, 51, 249)" />
+        </linearGradient>
+      </defs>
 <path d="M5164 12789 c-88 -15 -205 -57 -296 -106 -238 -130 -421 -341 -542
 -624 -585 -1369 -4255 -10079 -4272 -10139 -102 -350 -53 -716 132 -976 60
 -85 177 -191 265 -241 284 -160 1155 -628 1207 -649 407 -163 907 55 1174 511
