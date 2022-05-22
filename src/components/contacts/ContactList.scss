@@ -3,6 +3,7 @@
 .contacts {
   &__list {
     position: fixed;
+    left:8%;
     bottom: 0;
     z-index: 10;
     &::after {

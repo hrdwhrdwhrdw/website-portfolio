@@ -11,11 +11,7 @@ const Navbar = () => {
             Home
           </NavLink>
         </li>
-        <li className="nav__item">
-          <NavLink className="nav__link" to="about">
-            About
-          </NavLink>
-        </li>
+        
         <li className="nav__item">
           <NavLink className="nav__link" to="skills">
             Skills

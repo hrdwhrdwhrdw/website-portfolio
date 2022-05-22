@@ -12,6 +12,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   font-family: 'League';
   color: #fff;
+  overflow: overlay;
 }
 
 * {

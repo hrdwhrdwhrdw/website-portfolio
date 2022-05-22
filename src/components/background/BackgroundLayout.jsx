@@ -1,21 +1,21 @@
 import React from "react";
 import "./background.scss";
-import typescriptIcon from "../../assets/background/typescript-icon.svg";
-import javascriptIcon from "../../assets/background/javascript-icon.svg";
-import angularIcon from "../../assets/background/angular-icon.svg";
-import cssIcon from "../../assets/background/css3-icon.svg";
-import dockerIcon from "../../assets/background/docker-icon.svg";
-import gitIcon from "../../assets/background/git-icon.svg";
-import githubIcon from "../../assets/background/github-icon.svg";
-import graphqlIcon from "../../assets/background/graphql-icon.svg";
-import gulpIcon from "../../assets/background/gulp-icon.svg";
-import htmlIcon from "../../assets/background/html-icon.svg";
-import jsonIcon from "../../assets/background/json-icon.svg";
-import mongoIcon from "../../assets/background/mongodb-icon.svg";
-import nodeIcon from "../../assets/background/node-icon.svg";
-import reduxIcon from "../../assets/background/redux-icon.svg";
-import vueIcon from "../../assets/background/vue-icon.svg";
-import webpackIcon from "../../assets/background/webpack-icon.svg";
+import typescriptIcon from "../../assets/background-icons/typescript-icon.svg";
+import javascriptIcon from "../../assets/background-icons/javascript-icon.svg";
+import angularIcon from "../../assets/background-icons/angular-icon.svg";
+import cssIcon from "../../assets/background-icons/css3-icon.svg";
+import dockerIcon from "../../assets/background-icons/docker-icon.svg";
+import gitIcon from "../../assets/background-icons/git-icon.svg";
+import githubIcon from "../../assets/background-icons/github-icon.svg";
+import graphqlIcon from "../../assets/background-icons/graphql-icon.svg";
+import gulpIcon from "../../assets/background-icons/gulp-icon.svg";
+import htmlIcon from "../../assets/background-icons/html-icon.svg";
+import jsonIcon from "../../assets/background-icons/json-icon.svg";
+import mongoIcon from "../../assets/background-icons/mongodb-icon.svg";
+import nodeIcon from "../../assets/background-icons/node-icon.svg";
+import reduxIcon from "../../assets/background-icons/redux-icon.svg";
+import vueIcon from "../../assets/background-icons/vue-icon.svg";
+import webpackIcon from "../../assets/background-icons/webpack-icon.svg";
 
 const BackgroundLayout = ({mousePosition}) => {
   

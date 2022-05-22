@@ -1,9 +1,8 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
 import "./Home.scss";
 import { ReactComponent as Logo } from "../../assets/gradient-logo.svg";
 
-const Home = () => {
+const Home = ({openContactForm}) => {
   return (
     <div className="main-hero">
       <div className="main-hero__content">
@@ -14,13 +13,13 @@ const Home = () => {
           <p>Junior Front-end Developer</p>
         </div>
         <div className="main-hero__button-wrapper">
-          <NavLink to="#about" className="main-hero__about-button">
+          <span to="#about" className="main-hero__about-button" onClick={() => openContactForm()}>
             <span>About me</span>
             <svg width="13px" height="10px" viewBox="0 0 13 10">
               <path d="M1,5 L11,5"></path>
               <polyline points="8 1 12 5 8 9"></polyline>
             </svg>
-          </NavLink>
+          </span>
         </div>
       </div>
       <div className="main-hero__image-block">
