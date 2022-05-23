@@ -6,10 +6,11 @@ import ContactList from "./components/contacts/ContactList";
 import ContactPage from "./pages/contact-page/ContactPage";
 import Header from "./pages/header/Header";
 import Home from "./pages/home-page/Home";
+import Skills from "./pages/skills-page/Skills";
 
 function App() {
   const [mousePosition, setMousePosition] = useState({ x: null, y: null });
-  const [isModalOpen, setIsModalOpen] = useState(true);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const onMouseMoveTranslate = (e) => {
     let x = e.clientX / 15;
@@ -19,9 +20,11 @@ function App() {
 
   const closeContactForm = () => {
     setIsModalOpen(false);
+    document.body.style.overflow = "overlay";
   };
 
   const openContactForm = () => {
+    document.body.style.overflow = "hidden";
     setIsModalOpen(true);
   };
 
@@ -31,13 +34,14 @@ function App() {
         <BackgroundLayout mousePosition={mousePosition} />
         {isModalOpen && <ContactPage closeContactForm={closeContactForm} />}
         <div className="app__content">
-          <Header />
+          <Header isModalOpen={isModalOpen} />
           <ContactList />
-          {/* <ContactUs /> */}
           {/* <AnchorLink />  position: fixed */}
-          <Home openContactForm={openContactForm} />
-          {/* <SkillsPage /> */}
-          {/* <Project /> */}
+          <div className="app__wrapper">
+            <Home openContactForm={openContactForm} />
+            <Skills />
+            {/* <Project /> */}
+          </div>
         </div>
       </div>
     </HashRouter>

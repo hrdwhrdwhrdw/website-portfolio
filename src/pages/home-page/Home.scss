@@ -2,12 +2,13 @@
 
 .main-hero {
   height: calc(100vh - 80px);
+  width: 100%;
   position: relative;
   display: flex;
   flex-direction: column;
 
   &__content {
-    width: 50%;
+    width: 60%;
     margin-left: 100px;
     position: absolute;
     top: 30%;
@@ -23,15 +24,15 @@
       fill: url('#MyGradient');
     }
     &-block {
+      z-index: -1;
       position: absolute;
       top: 22%;
-      left: 30%;
-      z-index: -1;
+      left: 20%;
     }
   }
 
   &__title {
-    font-size: 30px;
+    font-size: 35px;
   }
 
   &__subtitle {

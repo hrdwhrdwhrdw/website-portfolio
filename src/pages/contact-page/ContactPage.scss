@@ -152,6 +152,60 @@
   }
 }
 
-body {
-  overflow: hidden;
+.contact-form {
+  &__close-btn {
+    background: none;
+    border: 0;
+    box-sizing: border-box;
+    color: transparent;
+    cursor: pointer;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 6px;
+    letter-spacing: 1.5px;
+    line-height: 36px;
+    outline: none;
+    overflow: hidden;
+    font-weight: 900;
+    text-align: center;
+    padding: 10px 0 0;
+    position: absolute;
+    text-transform: uppercase;
+    transform: translate(-50%, -50%);
+    transition: all 0.2s ease-in;
+    width: 42px;
+
+    &::before,
+    &::after {
+      background-color: white;
+      content: '';
+      display: block;
+      height: 3px;
+      left: 0;
+      position: absolute;
+      transform-origin: center left;
+      transition: all 0.2s ease-in;
+      width: 141.4214px;
+      z-index: -1;
+    }
+
+    &::before {
+      top: 0;
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      bottom: 0;
+      transform: rotate(-45deg);
+    }
+
+    &:hover {
+      color: $purple;
+
+      &::before,
+      &::after {
+        height: 50px;
+        transform: rotate(0deg);
+      }
+    }
+  }
 }
