@@ -37,11 +37,11 @@ function App() {
           <Header isModalOpen={isModalOpen} />
           <ContactList />
           {/* <AnchorLink />  position: fixed */}
-          <div className="app__wrapper">
+          <main className="app__wrapper">
             <Home openContactForm={openContactForm} />
             <Skills />
             {/* <Project /> */}
-          </div>
+          </main>
         </div>
       </div>
     </HashRouter>

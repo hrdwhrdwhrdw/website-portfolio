@@ -4,7 +4,7 @@ import { ReactComponent as Logo } from "../../assets/gradient-logo.svg";
 
 const Home = ({openContactForm}) => {
   return (
-    <div className="main-hero">
+    <section className="main-hero">
       <div className="main-hero__content">
         <div className="main-hero__title">
           <h1>Albert Gilmitdinov</h1>
@@ -25,7 +25,7 @@ const Home = ({openContactForm}) => {
       <div className="main-hero__image-block">
         <Logo className="main-hero__image" />
       </div>
-    </div>
+    </section>
   );
 };
 
