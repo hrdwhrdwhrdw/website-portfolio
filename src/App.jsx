@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.scss";
 import BackgroundLayout from "./components/background/BackgroundLayout";
 import ContactList from "./components/contacts/ContactList";
+import Preloader from "./components/preloader/Preloader";
 import ContactPage from "./pages/contact-page/ContactPage";
 import Header from "./pages/header/Header";
 
@@ -39,7 +40,7 @@ export const App = React.memo(function App() {
           <Header isModalOpen={isModalOpen} />
           <ContactList />
           <main className="app__wrapper">
-            <Suspense fallback="">
+            <Suspense fallback={<Preloader />}>
               <Routes>
                 <Route
                   path="/"
