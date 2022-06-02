@@ -1,14 +1,16 @@
-import { useState } from "react";
-import { HashRouter } from "react-router-dom";
+import React, { lazy, Suspense, useState } from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.scss";
 import BackgroundLayout from "./components/background/BackgroundLayout";
 import ContactList from "./components/contacts/ContactList";
 import ContactPage from "./pages/contact-page/ContactPage";
 import Header from "./pages/header/Header";
-import Home from "./pages/home-page/Home";
-import Skills from "./pages/skills-page/Skills";
 
-function App() {
+const Home = lazy(() => import("./pages/home-page/Home"));
+const Projects = lazy(() => import("./pages/projects-page/Projects"));
+const Skills = lazy(() => import("./pages/skills-page/Skills"));
+
+export const App = React.memo(function App() {
   const [mousePosition, setMousePosition] = useState({ x: null, y: null });
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -29,23 +31,29 @@ function App() {
   };
 
   return (
-    <HashRouter>
+    <BrowserRouter>
       <div className="app" onMouseMove={(e) => onMouseMoveTranslate(e)}>
         <BackgroundLayout mousePosition={mousePosition} />
         {isModalOpen && <ContactPage closeContactForm={closeContactForm} />}
         <div className="app__content">
           <Header isModalOpen={isModalOpen} />
           <ContactList />
-          {/* <AnchorLink />  position: fixed */}
           <main className="app__wrapper">
-            <Home openContactForm={openContactForm} />
-            <Skills />
-            {/* <Project /> */}
+            <Suspense fallback="">
+              <Routes>
+                <Route
+                  path="/"
+                  element={<Home openContactForm={openContactForm} />}
+                />
+                <Route path="/skills" element={<Skills />} />
+                <Route path="/projects" element={<Projects />} />
+              </Routes>
+            </Suspense>
           </main>
         </div>
       </div>
-    </HashRouter>
+    </BrowserRouter>
   );
-}
+});
 
 export default App;

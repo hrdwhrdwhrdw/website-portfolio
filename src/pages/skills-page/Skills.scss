@@ -9,12 +9,12 @@
   align-items: center;
 
   &__title {
-    margin-bottom: 50px;
+    margin-bottom: 10rem;
   }
 
   h1 {
     color: #fff;
-    font-size: 40px;
+    font-size: 60px;
     position: relative;
     display: flex;
     align-items: center;
@@ -116,31 +116,6 @@
         filter: brightness(40%);
       }
     }
-  }
-}
-
-.text-box {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 60px;
-
-  h1 {
-    font-size: 60px;
-    font-weight: 900;
-    background-color: #3a0c91;
-    color: #fff;
-    display: block;
-    padding: 10px;
-
-  }
-
-  h1:nth-child(2) {
-    position: absolute;
-    background-color: #fff;
-    color: #3a0c91;
-    clip-path: inset(-1% -1% 50% -1%);
   }
 }
 

@@ -1,0 +1,97 @@
+@import '../../../utils/styles.scss';
+
+.project {
+  &__item {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 300px;
+    margin: 0 auto;
+    margin-bottom: 5rem;
+
+    &:nth-of-type(2n) {
+      .project__image {
+        left: auto;
+        right: 0;
+      }
+
+      .project__content {
+        left: 0;
+        text-align: left;
+      }
+
+      .project__tech-list {
+        align-self: start;
+      }
+    }
+  }
+
+  &__image {
+    width: 50%;
+    position: absolute;
+    left: 0;
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+  &__title {
+    margin-bottom: 15px;
+  }
+
+  &__content {
+    position: absolute;
+    right: 0;
+    padding: 15px 0;
+    display: flex;
+    margin-right: 0;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: right;
+    width: 55%;
+  }
+
+  &__desc {
+    background-color: #3a0c91;
+    padding: 2rem 1rem;
+    border-radius: 6px;
+  }
+
+  &__tech-list {
+    align-self: end;
+    width: 80%;
+    color: #a8b2d1;
+    margin-top: 1rem;
+    word-break: break-all;
+    margin-bottom: 1rem;
+
+    span {
+      display: inline-block;
+      margin-right: 0.5rem;
+      font-weight: 200;
+      font-size: 14px;
+    }
+  }
+
+  &__links {
+    svg {
+      height: 20px;
+      width: 20px;
+      fill: #fff;
+      transition: all 0.2s linear;
+
+    }
+
+    a {
+      :first-child {
+        margin-right: 15px;
+      }
+
+      &:hover svg {
+        fill: $purple;
+      }
+    }
+  }
+}
