@@ -1,6 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import "./Navbar.scss";
+import ResumeButton from "./ResumeButton/ResumeButton";
 
 const Navbar = () => {
   return (
@@ -21,6 +22,9 @@ const Navbar = () => {
           <NavLink className="nav__link" to="/projects">
             Projects
           </NavLink>
+        </li>
+        <li className="nav__item">
+          <ResumeButton />
         </li>
       </ul>
     </nav>

@@ -36,8 +36,8 @@ export const App = React.memo(function App() {
       <div className="app" onMouseMove={(e) => onMouseMoveTranslate(e)}>
         <BackgroundLayout mousePosition={mousePosition} />
         {isModalOpen && <ContactPage closeContactForm={closeContactForm} />}
+        <Header isModalOpen={isModalOpen} />
         <div className="app__content">
-          <Header isModalOpen={isModalOpen} />
           <ContactList />
           <main className="app__wrapper">
             <Suspense fallback={<Preloader />}>

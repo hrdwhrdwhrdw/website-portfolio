@@ -16,8 +16,9 @@
 
   &__wrapper {
     margin: 0 auto;
-    width: 1170px;
-    height: calc(100% - 100px);
+    width: 100%;
+    max-width: 1170px;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
