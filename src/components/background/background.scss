@@ -2,8 +2,14 @@
   width: 100vw;
   height: 100vh;
   position: fixed;
-  background: linear-gradient(to bottom right,#3a0c91, #000);
 
+  &_day {
+    background: linear-gradient(to bottom right, #ff0000, rgb(216, 216, 216));
+  }
+
+  &_night {
+    background: linear-gradient(to bottom right, #3a0c91, #000);
+  }
 
   &__icon {
     position: absolute;

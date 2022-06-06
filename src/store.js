@@ -4,19 +4,26 @@ export const store = {
       id: 1,
       title: "Portfolio website",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolore rerum laborum iure enim sint nemo omnis voluptate exercitationem eius?",
+        "a browser-based single page application to showcase my pet projects.",
       image: "../../../assets/projects-images/website.jpg",
       links: {
         github: "",
         website: "",
       },
-      techList: ["React", "SCSS", "JavaScript", "CRA", "Flexbox", "Responsive Web"],
+      techList: [
+        "React",
+        "SCSS",
+        "JavaScript",
+        "CRA",
+        "Flexbox",
+        "Responsive Web",
+      ],
     },
     {
       id: 2,
       title: "Messenger",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolore rerum laborum iure enim sint nemo omnis voluptate exercitationem eius?",
+        "front-end part of a web application, is a simplified analogue of a full-fledged messenger. The chat is developed on React + Redux + TypeScript.",
       image: "../../../assets/projects-images/website.jpg",
       links: {
         github: "",
@@ -33,44 +40,68 @@ export const store = {
         "Axios",
         "Grid",
         "Material UI",
-        "Responsive Web"
+        "Responsive Web",
       ],
     },
     {
       id: 3,
       title: "Cloud Disk",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolore rerum laborum iure enim sint nemo omnis voluptate exercitationem eius?",
+        " a front-end part of a simplified analogue of the cloudmail cloud service, developed on the MERN stack (MongoDB, Express.js, React, Node.js.) in order to understand at a basic level how the back-end works and how to work with the database.",
       image: "../../../assets/projects-images/website.jpg",
       links: {
         github: "",
         website: "",
       },
-      techList: ["React", "Node.js", "Express.js", "MongoDB", "SCSS", "JavaScript", "CRA", "Flexbox", "Responsive Web"],
+      techList: [
+        "React",
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "SCSS",
+        "JavaScript",
+        "CRA",
+        "Flexbox",
+        "Responsive Web",
+      ],
     },
     {
       id: 4,
       title: "Todo App",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolore rerum laborum iure enim sint nemo omnis voluptate exercitationem eius?",
+        " it was from these projects that I began my acquaintance with React and the practical basics of Javascript. These are the simplest applications I wrote in order to learn the basics of React, customizing them by SCSS.",
       image: "../../../assets/projects-images/website.jpg",
       links: {
         github: "",
         website: "",
       },
-      techList: ["React", "SCSS", "JavaScript", "CRA", "Flexbox", "Responsive Web"],
+      techList: [
+        "React",
+        "SCSS",
+        "JavaScript",
+        "CRA",
+        "Flexbox",
+        "Responsive Web",
+      ],
     },
     {
       id: 5,
       title: "Tic-Tac-Toe",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolore rerum laborum iure enim sint nemo omnis voluptate exercitationem eius?",
+        " it was from these projects that I began my acquaintance with React and the practical basics of Javascript. These are the simplest applications I wrote in order to learn the basics of React, customizing them by SCSS.",
       image: "../../../assets/projects-images/website.jpg",
       links: {
         github: "dwd",
         website: "",
       },
-      techList: ["React", "SCSS", "JavaScript", "CRA", "Flexbox", "Responsive Web"],
+      techList: [
+        "React",
+        "SCSS",
+        "JavaScript",
+        "CRA",
+        "Flexbox",
+        "Responsive Web",
+      ],
     },
   ],
 };

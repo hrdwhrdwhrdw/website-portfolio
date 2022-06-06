@@ -50,6 +50,7 @@ export const App = React.memo(function App() {
                 <Route path="/projects" element={<Projects />} />
               </Routes>
             </Suspense>
+            
           </main>
         </div>
       </div>

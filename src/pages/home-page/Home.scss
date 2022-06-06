@@ -1,8 +1,7 @@
 @import '../../utils/styles.scss';
 
 .main-hero {
-  // height: calc(100vh - 80px);
-  height: 100%;
+  height: 100vh;
   width: 100%;
   position: relative;
   display: flex;
@@ -15,15 +14,28 @@
     top: 30%;
     color: #fff;
     font-weight: bold;
-
   }
 
   &__image {
     width: 20vw;
     height: 20vw;
-    path {
-      fill: url('#MyGradient');
+
+    &_day {
+      path {
+        fill: url('#LightGradient');
+      }
     }
+
+    &_night {
+      path {
+        fill: url('#NightGradient');
+      }
+    }
+
+    // path {
+    //   fill: url('#MyGradient');
+    // }
+
     &-block {
       z-index: -1;
       position: absolute;
@@ -56,6 +68,30 @@
     align-items: center;
     cursor: pointer;
 
+    &_day {
+      &::before {
+        background: rgba($green, .5);
+      }
+
+      &:hover {
+        &:before {
+          background: rgba($green, 1)
+        }
+      }
+    }
+
+    &_night {
+      &::before {
+        background: rgba($purple, .5);
+      }
+
+      &:hover {
+        &:before {
+          background: rgba($purple, 1)
+        }
+      }
+    }
+
     &:before {
       content: "";
       position: absolute;
@@ -63,7 +99,6 @@
       left: 0;
       display: block;
       border-radius: 20px;
-      background: rgba($purple, .5);
       width: 40px;
       height: 40px;
       transition: all .3s ease;
@@ -95,7 +130,6 @@
     &:hover {
       &:before {
         width: 100%;
-        background: rgba($purple, 1)
       }
 
       svg {
@@ -107,5 +141,4 @@
       transform: scale(.96)
     }
   }
-
 }
