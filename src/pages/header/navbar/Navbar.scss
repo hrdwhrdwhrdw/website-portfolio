@@ -1,6 +1,7 @@
 @import '../../../utils/styles.scss';
 
 .nav {
+  margin-left: auto;
   &__list {
     display: flex;
     justify-content: center;
@@ -21,13 +22,13 @@
 
     &_day {
       &::before {
-        background-color: $green;
+        background-color: $primary-day;
       }
     }
 
     &_night {
       &::before {
-        background-color: $purple;
+        background-color: $primary-night;
       }
     }
 
@@ -38,7 +39,7 @@
       right: 0;
       width: 0;
       height: 4px;
-      // background-color: $purple;
+      // background-color: $primary-night;
       transition: width 0.8s cubic-bezier(0.25, 1, 0.5, 1);
     }
   }

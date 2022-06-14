@@ -39,7 +39,7 @@
     &_day {
       &:hover {
         path {
-          fill: $green !important;
+          fill: $primary-day !important;
         }
       }
     }
@@ -47,7 +47,7 @@
     &_night {
       &:hover {
         path {
-          fill: $purple !important;
+          fill: $primary-night !important;
         }
       }
     }

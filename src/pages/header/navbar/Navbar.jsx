@@ -2,7 +2,6 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import { ThemeContextConsumer } from "../../../utils/themeContext";
 import "./Navbar.scss";
-import ResumeButton from "./ResumeButton/ResumeButton";
 
 const Navbar = () => {
   return (
@@ -25,9 +24,6 @@ const Navbar = () => {
               <NavLink className={`nav__link nav__link_${context.theme}`} to="/projects">
                 Projects
               </NavLink>
-            </li>
-            <li className="nav__item">
-              <ResumeButton />
             </li>
           </ul>
         </nav>

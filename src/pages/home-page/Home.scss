@@ -32,10 +32,6 @@
       }
     }
 
-    // path {
-    //   fill: url('#MyGradient');
-    // }
-
     &-block {
       z-index: -1;
       position: absolute;
@@ -70,24 +66,24 @@
 
     &_day {
       &::before {
-        background: rgba($green, .5);
+        background: rgba($primary-day, .5);
       }
 
       &:hover {
         &:before {
-          background: rgba($green, 1)
+          background: rgba($primary-day, 1)
         }
       }
     }
 
     &_night {
       &::before {
-        background: rgba($purple, .5);
+        background: rgba($primary-night, .5);
       }
 
       &:hover {
         &:before {
-          background: rgba($purple, 1)
+          background: rgba($primary-night, 1)
         }
       }
     }

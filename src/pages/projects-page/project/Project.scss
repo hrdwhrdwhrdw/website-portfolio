@@ -54,9 +54,18 @@
   }
 
   &__desc {
-    background-color: #3a0c91;
     padding: 2rem 1rem;
     border-radius: 6px;
+
+    &_day {
+      background-color: $primary-day;
+
+    }
+
+    &_night {
+      background-color: $secondary-night;
+
+    }
   }
 
   &__tech-list {
@@ -76,21 +85,26 @@
   }
 
   &__links {
+    &_day {
+      a:hover svg {
+        fill: $primary-day;
+      }
+    }
+    &_night {
+      a:hover svg {
+        fill: $primary-night;
+      }
+    }
     svg {
       height: 20px;
       width: 20px;
       fill: #fff;
       transition: all 0.2s linear;
-
     }
 
     a {
       :first-child {
         margin-right: 15px;
-      }
-
-      &:hover svg {
-        fill: $purple;
       }
     }
   }

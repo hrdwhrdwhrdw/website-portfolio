@@ -1,3 +1,5 @@
+@import '../../utils/styles.scss';
+
 .background {
   width: 100vw;
   height: 100vh;
@@ -8,7 +10,7 @@
   }
 
   &_night {
-    background: linear-gradient(to bottom right, #3a0c91, #000);
+    background: linear-gradient(to bottom right, $secondary-night, #000);
   }
 
   &__icon {
