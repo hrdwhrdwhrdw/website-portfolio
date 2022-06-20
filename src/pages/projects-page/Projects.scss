@@ -11,5 +11,18 @@
     flex-direction: column;
     margin-top: 10rem;
     width: 100%;
+    max-width: 1000px;
+  }
+}
+
+@media (max-width: 1280px) {
+  .projects__list {
+    width: 85%;
+  }
+}
+
+@media (max-width: 768px) {
+  .projects__list {
+    width: 100%;
   }
 }

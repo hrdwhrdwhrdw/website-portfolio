@@ -17,8 +17,8 @@
   }
 
   &__image {
-    width: 20vw;
-    height: 20vw;
+    width: 43vw;
+    height: 43vh;
 
     &_day {
       path {
@@ -41,29 +41,30 @@
   }
 
   &__title {
-    font-size: 42px;
+    font-size: 3rem;
   }
 
   &__subtitle {
-    font-size: 28px;
+    font-size: 2rem;
     font-style: italic;
   }
 
   &__button-wrapper {
     margin-top: 20px;
-    width: 160px;
+    border: none;
+    background: none;
   }
 
   &__about-button {
     position: relative;
     margin: auto;
-    padding: 13px 12px;
+    padding: 1rem 1rem;
     transition: all .2s ease;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     cursor: pointer;
-
+    
     &_day {
       &::before {
         background: rgba($primary-day, .5);
@@ -91,18 +92,18 @@
     &:before {
       content: "";
       position: absolute;
-      top: 0;
+      top: 4px;
       left: 0;
       display: block;
-      border-radius: 20px;
-      width: 40px;
-      height: 40px;
+      border-radius: 1.25rem;
+      width: 2.5rem;
+      height: 2.5rem;
       transition: all .3s ease;
     }
 
     span {
       position: relative;
-      font-size: 14px;
+      font-size: 0.825rem;
       font-weight: 900;
       letter-spacing: .25em;
       text-transform: uppercase;

@@ -3,12 +3,15 @@ import "./ContactMe.scss";
 import { ContactMeForm } from "../../../components/forms/ContactMe/ContactMeForm";
 import { ThemeContextConsumer } from "../../../utils/themeContext";
 
-const ContactMe = ({ closeContactForm }) => {
+const ContactMe = ({ closeContactForm, isModalOpen }) => {
   return (
     <ThemeContextConsumer>
       {(context) => (
         <div
-          className={`half-contact half-contact_contact half-contact_${context.theme}`}
+          className={
+            `half-contact half-contact_contact half-contact_${context.theme}` +
+            (isModalOpen ? " show-half-contact_contact" : "")
+          }
         >
           <div className="half-contact__wrapper">
             <span
@@ -18,9 +21,7 @@ const ContactMe = ({ closeContactForm }) => {
               Close
             </span>
             <h2 className="contact-form__title">Talk to me.</h2>
-            <h4 className="contact-form__subtitle">
-              Here you can contact me.
-            </h4>
+            <h4 className="contact-form__subtitle">Here you can contact me.</h4>
             <ContactMeForm />
           </div>
         </div>

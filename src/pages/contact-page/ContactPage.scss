@@ -9,10 +9,13 @@
   align-items: center;
   top: 0;
   left: 0;
-  z-index: 20;
+  z-index: -1;
+  opacity: 0;
+  transition: all 1s ease;
 
   &__wrapper {
-    width: 75%;
+    max-width: 1170px;
+    width: 95%;
     height: 90%;
     display: flex;
     justify-content: center;
@@ -25,7 +28,6 @@
 .half-contact {
   width: 50%;
   height: 100%;
-  padding: 0 15px;
   position: relative;
 
   &__wrapper {
@@ -39,13 +41,18 @@
       align-items: flex-start;
       gap: 10px;
       width: 100%;
+      transition: all 0.5s linear;
+
     }
   }
-
 
   &_about {
     background-color: hsla(0, 0%, 95%, .97);
     text-shadow: 1px 1px 2px black, 0 0 1em black;
+    transition: all 0.5s ease;
+    transform: translateY(-100%);
+    opacity: 0;
+    transition-delay: 0.4s;
   }
 
   &_day {
@@ -62,7 +69,10 @@
     align-items: flex-start;
     padding-left: 5%;
     position: relative;
-
+    transform: translateY(100%);
+    opacity: 0;
+    transition: all 0.5s ease;
+    transition-delay: 0.4s;
 
     span {
       position: absolute;
@@ -94,10 +104,9 @@
     max-width: 100%;
     filter: brightness(1) grayscale(1) opacity(0.7);
     object-fit: cover;
-    position: static;
     display: block;
     border-radius: 10px;
-    z-index: 3232432;
+    z-index: 50;
     transition: all 0.2s linear;
 
     &-wrapper {
@@ -107,18 +116,23 @@
       position: relative;
       width: 100%;
       border-radius: 10px;
+
       &_day {
         background-color: $secondary-day;
+
         &::after {
           border: 2px solid $secondary-day;
         }
       }
+
       &_night {
         background-color: blue;
+
         &::after {
-        border: 2px solid $secondary-night;
+          border: 2px solid $secondary-night;
         }
       }
+
       &:hover {
         background-color: transparent;
 
@@ -158,16 +172,18 @@
 
 
     &-block {
-      max-width: 200px;
+      max-width: 160px;
       position: relative;
       height: auto;
       border-radius: 10px;
       z-index: 3;
+
       &_day {
         box-shadow: 10px 10px 30px -10px $secondary-day;
       }
+
       &_night {
-      box-shadow: 10px 10px 30px -10px $secondary-night;
+        box-shadow: 10px 10px 30px -10px $secondary-night;
       }
     }
   }
@@ -194,9 +210,11 @@
     transform: translate(-50%, -50%);
     transition: all 0.2s ease-in;
     width: 42px;
+
     &_day:hover {
       color: $primary-day;
     }
+
     &_night:hover {
       color: $primary-night;
     }
@@ -234,4 +252,128 @@
       }
     }
   }
+}
+
+
+@media (max-width: 1024px) {
+  .half-contact {
+    &__image-wrapper::after {
+      top: 10px;
+      left: 10px;
+    }
+
+    &__wrapper_about {
+      flex-direction: column;
+      padding-left: 5%;
+    }
+
+    &__info-block {
+      width: 80%;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .about-contact {
+    &__wrapper {
+      overflow-y: auto;
+      width: 100vw;
+      height: 100vh;
+      flex-direction: column-reverse;
+    }
+  }
+
+  .half-contact {
+    padding: 20px;
+    width: 100%;
+
+    &__image-block {
+      max-width: 120px;
+    }
+
+    &__info-block {
+      width: 100%;
+    }
+
+    &__wrapper {
+      position: relative;
+      width: 80%;
+      margin: 0 auto;
+      top: 0;
+
+      &_about {
+        padding: 0;
+      }
+    }
+
+    &_contact span {
+      top: 22px;
+      right: -20px;
+    }
+  }
+
+  .contact-form__close-btn {
+    padding: 0;
+    width: 36px;
+  }
+}
+
+@media (max-width: 450px) {
+  .half-contact {
+    &__about-info p {
+      font-size: 1.3rem;
+    }
+
+    &__subtitle {
+      font-size: 1.8rem;
+    }
+
+    &__image-block {
+      max-width: 100px;
+    }
+  }
+}
+
+.show-half-contact_about {
+  opacity: 1;
+  transform: translateY(0);
+  transform: translateX(0);
+}
+
+.show-half-contact_contact {
+  opacity: 1;
+  transform: translateY(0);
+  transform: translateX(0);
+}
+
+.is-contact-open {
+  z-index: 31;
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .half-contact {
+    &_about {
+      transform: translateX(-100%);
+    }
+
+    &_contact {
+      transform: translateX(100%);
+    }
+  }
+}
+
+.show-half-contact_about {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.show-half-contact_contact {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.is-contact-open {
+  z-index: 31;
+  opacity: 1;
 }

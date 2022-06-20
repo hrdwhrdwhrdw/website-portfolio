@@ -2,11 +2,16 @@ import React from "react";
 import avatar from "../../../assets/avatar.jpg";
 import { ThemeContextConsumer } from "../../../utils/themeContext";
 
-const AboutInfo = () => {
+const AboutInfo = ({ isModalOpen }) => {
   return (
     <ThemeContextConsumer>
       {(context) => (
-        <div className="half-contact half-contact_about">
+        <div
+          className={
+            `half-contact half-contact_about` +
+            (isModalOpen ? " show-half-contact_about" : "")
+          }
+        >
           <div className="half-contact__wrapper half-contact__wrapper_about">
             <div className="half-contact__info-block">
               <div className="half-contact__title">
@@ -27,7 +32,9 @@ const AboutInfo = () => {
                 </p>
               </div>
             </div>
-            <div className={`half-contact__image-block half-contact__image-block_${context.theme}`}>
+            <div
+              className={`half-contact__image-block half-contact__image-block_${context.theme}`}
+            >
               <div
                 className={`half-contact__image-wrapper half-contact__image-wrapper_${context.theme}`}
               >

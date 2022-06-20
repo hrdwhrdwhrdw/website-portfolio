@@ -35,8 +35,11 @@ export const App = React.memo(function App() {
     <BrowserRouter>
       <div className="app" onMouseMove={(e) => onMouseMoveTranslate(e)}>
         <BackgroundLayout mousePosition={mousePosition} />
-        {isModalOpen && <ContactPage closeContactForm={closeContactForm} />}
-        <Header isModalOpen={isModalOpen} />
+        <ContactPage
+          closeContactForm={closeContactForm}
+          isModalOpen={isModalOpen}
+        />
+        <Header />
         <div className="app__content">
           <ContactList />
           <main className="app__wrapper">
@@ -50,7 +53,6 @@ export const App = React.memo(function App() {
                 <Route path="/projects" element={<Projects />} />
               </Routes>
             </Suspense>
-            
           </main>
         </div>
       </div>

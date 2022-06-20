@@ -5,7 +5,7 @@
     position: relative;
     display: flex;
     justify-content: space-between;
-    width: 100%;
+    width: 85%;
     height: 300px;
     margin: 0 auto;
     margin-bottom: 5rem;
@@ -28,9 +28,27 @@
   }
 
   &__image {
-    width: 50%;
+    width: 71%;
     position: absolute;
     left: 0;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      filter: brightness(1) grayscale(1) opacity(0.6);
+      background-color: blue;
+      width: 100%;
+      height: 98%;
+      mix-blend-mode: multiply;
+      transition: all 0.5S ease;
+    }
+
+    &:hover::before {
+      filter: none;
+      background: none;
+    }
 
     img {
       max-width: 100%;
@@ -80,7 +98,7 @@
       display: inline-block;
       margin-right: 0.5rem;
       font-weight: 200;
-      font-size: 14px;
+      font-size: .9rem;
     }
   }
 
@@ -90,11 +108,13 @@
         fill: $primary-day;
       }
     }
+
     &_night {
       a:hover svg {
         fill: $primary-night;
       }
     }
+
     svg {
       height: 20px;
       width: 20px;
@@ -105,6 +125,92 @@
     a {
       :first-child {
         margin-right: 15px;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .project {
+    &__image {
+      width: 100%;
+      height: 100%;
+      box-shadow: 0 10px 30px -15px black;
+      filter: grayscale(13%) contrast(1) brightness(50%);
+
+      img {
+        filter: blur(1px);
+        height: 100%;
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-color: #0f0d10;
+        ;
+        opacity: 0.55;
+      }
+    }
+
+    &__desc {
+      background: none;
+      font-size: 1.2rem;
+      padding: 0;
+    }
+
+    &__title {
+      font-size: 3rem;
+    }
+
+    &__tech-list {
+      align-self: start;
+
+      span {
+        font-size: 1.1rem;
+      }
+    }
+
+    &__content {
+      right: 30px;
+      width: 80%;
+      height: 100%;
+      padding-top: 30px;
+      text-align: initial;
+    }
+
+    &__item {
+      &:nth-of-type(2n) {
+        .project__image {
+          right: auto;
+          left: auto;
+        }
+
+        .project__content {
+          left: auto;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  .project {
+    &__desc {
+      font-size: 1.6rem;
+    }
+
+    &__title {
+      font-size: 3rem;
+    }
+
+    &__tech-list {
+
+      span {
+        font-size: 1.2rem;
       }
     }
   }

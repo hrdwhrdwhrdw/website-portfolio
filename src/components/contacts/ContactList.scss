@@ -3,7 +3,7 @@
 .contacts {
   &__list {
     position: fixed;
-    left: 8%;
+    left: 40px;
     bottom: 0;
     z-index: 10;
 
@@ -22,15 +22,14 @@
     margin-bottom: 15px;
 
     svg {
-      width: 20px;
-      height: 20px;
+      width: 1.1rem;
+      height: 1.1rem;
     }
   }
 }
 
 .contact {
   &__link {
-
     svg,
     path {
       transition: 0.2s all linear;
@@ -57,5 +56,11 @@
         transform: scale(1.2);
       }
     }
+  }
+}
+
+@media (max-width: 768px) {
+  .contacts__list {
+    display: none;
   }
 }

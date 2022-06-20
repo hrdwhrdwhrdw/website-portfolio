@@ -52,7 +52,7 @@ export const ContactMeForm = () => {
                 onChange={(e) => onChangeName(e)}
                 value={name}
               />
-              <span className="focus-border"></span>
+              <span className={`focus-border focus-border_${context.theme}`}></span>
             </div>
             <label>Email*</label>
             <div className="contact__input-wrapper">
@@ -64,7 +64,7 @@ export const ContactMeForm = () => {
                 onChange={(e) => onChangeMail(e)}
                 value={mail}
               />
-              <span className="focus-border"></span>
+              <span className={`focus-border focus-border_${context.theme}`}></span>
             </div>
             <label>Message*</label>
             <div className="contact__input-wrapper">
@@ -76,7 +76,7 @@ export const ContactMeForm = () => {
                 onChange={(e) => onChangeMessage(e)}
                 value={message}
               />
-              <span className="focus-border"></span>
+              <span className={`focus-border focus-border_${context.theme}`}></span>
             </div>
             <button
               className={`contact__button contact__button_${context.theme}`}

@@ -5,7 +5,7 @@ export default function AboutButton({ openContactForm }) {
   return (
     <ThemeContextConsumer>
       {(context) => (
-        <div className="main-hero__button-wrapper">
+        <button className="main-hero__button-wrapper">
           <span
             to="#about"
             className={`main-hero__about-button main-hero__about-button_${context.theme}`}
@@ -17,7 +17,7 @@ export default function AboutButton({ openContactForm }) {
               <polyline points="8 1 12 5 8 9"></polyline>
             </svg>
           </span>
-        </div>
+        </button>
       )}
     </ThemeContextConsumer>
   );

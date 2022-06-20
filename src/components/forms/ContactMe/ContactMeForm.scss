@@ -23,16 +23,16 @@
   }
 
   &__button {
-    padding: 10px 15px;
+    padding: 0.625rem 0.94rem;
     background-color: transparent;
-    border-radius: 10px;
+    border-radius: 0.625rem;
     width: 30%;
-    border-radius: 5px;
+    border-radius: 0.31rem;
     letter-spacing: 3px;
     font-weight: bold;
     color: #fff;
     font-weight: bold;
-    font-size: 15px;
+    font-size: 1rem;
     opacity: 0.7;
     cursor: pointer;
     transition: all 0.2s linear;
@@ -73,7 +73,7 @@
 label {
   letter-spacing: 2px;
   font-weight: bold;
-  font-size: 0.8rem;
+  font-size: 1rem;
 }
 
 .contact {
@@ -94,12 +94,48 @@ label {
   left: 50%;
   width: 0;
   height: 2px;
-  background-color: $primary-day;
   transition: 0.4s;
+}
+
+.contact__input~.focus-border_day {
+  background-color: $primary-day;
+}
+
+.contact__input~.focus-border_night {
+  background-color: $primary-night;
 }
 
 .contact__input:focus~.focus-border {
   width: 100%;
   transition: 0.4s;
   left: 0;
+}
+
+@media (max-width: 768px) {
+  .contact__form {
+    width: 100%;
+  }
+}
+
+@media (max-width: 450px) {
+  .contact-form {
+    &__title {
+      font-size: 2.5rem;
+    }
+    &__subtitle {
+      font-size: 1.5rem;
+    }
+    
+  }
+  label {
+    font-size: 1.3rem;
+  }
+  .contact__input {
+    font-size: 1.2rem;
+    padding: 10px 7px;
+  }
+  .contact__button {
+    font-size: 1.2rem;
+    padding: 8px 10px;
+  }
 }

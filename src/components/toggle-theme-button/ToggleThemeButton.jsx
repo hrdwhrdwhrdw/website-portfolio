@@ -1,17 +1,27 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { ThemeContextConsumer } from "../../utils/themeContext";
 import "./ToggleThemeButton.scss";
 
-const ToggleThemeButton = () => {
+const ToggleThemeButton = ({ toggleTheme, theme }) => {
+  const [isChecked, setIsChecked] = useState(false);
+  useEffect(() => {
+    if (theme === "day") {
+      setIsChecked(true);
+    } else {
+      setIsChecked(false);
+    }
+  }, [theme]);
+
   return (
     <ThemeContextConsumer>
       {(context) => (
         <div className="toggle-button">
           <input
-            onChange={() => context.toggleTheme()}
+            onChange={() => toggleTheme()}
             type="checkbox"
             id="toggle"
             className="toggle--checkbox"
+            checked={!isChecked}
           />
           <label htmlFor="toggle" className="toggle--label" />
         </div>

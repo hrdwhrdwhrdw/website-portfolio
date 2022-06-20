@@ -121,26 +121,33 @@
 .descriptions {
   position: absolute;
   top: 0;
-  left: 0;
+  left: 7%;
   height: 100%;
-  width: 100%;
+  width: 86%;
 
   svg {
-    width: 40px;
-    height: 40px;
+    width: 3rem;
+    height: 3rem;
     fill: #fff;
   }
 
   &__block {
     position: absolute;
-    max-width: 340px;
-    height: 160px;
+    width: 30%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
     text-align: center;
     font-weight: bold;
     padding: 15px;
     font-size: 15px;
     border-radius: 10px;
     z-index: 3;
+    p {
+      font-size: .9rem;
+    }
     &_day{
       background-color: $primary-day;
       border: 4px solid $primary-day;
@@ -159,7 +166,7 @@
 
     &_front-skills {
       top: 0%;
-      left: calc(50% - 170px);
+      left: calc(50% - 15%);
     }
 
     &_debugging {
@@ -174,7 +181,42 @@
 
     &_fix-bugs {
       bottom: 0%;
-      left: calc(50% - 170px);
+      left: calc(50% - 15%);
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .descriptions {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    top: -11%;
+    &__block {
+      height: 120px;
+      width: 40%;
+      position: static;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  .skills {
+    &__image {
+      display: none;
+    }
+  }
+  .descriptions {
+    &__block {
+      width: 80%;
+      p {
+        font-size: 1.3rem;
+      }
     }
   }
 }

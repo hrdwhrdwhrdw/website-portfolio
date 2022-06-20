@@ -3,15 +3,23 @@ const { Provider, Consumer } = React.createContext();
 
 class ThemeContextProvider extends Component {
   state = {
-    theme: "day",
+    theme: localStorage.getItem("data-theme") || "day",
   };
 
   toggleTheme = () => {
-    this.setState((prevState) => {
-      return {
-        theme: prevState.theme === "day" ? "night" : "day",
-      };
-    });
+    if (this.state.theme === "day") {
+      this.setState({ theme: "night" });
+      localStorage.setItem("data-theme", "night");
+    }
+    if (this.state.theme === "night") {
+      this.setState({ theme: "day" });
+      localStorage.setItem("data-theme", "day");
+    }
+    // this.setState((prevState) => {
+    //   return {
+    //     theme: prevState.theme === "day" ? "night" : "day",
+    //   };
+    // });
   };
 
   render() {
