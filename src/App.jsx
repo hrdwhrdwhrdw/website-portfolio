@@ -1,4 +1,4 @@
-import React, { lazy, Suspense, useState } from "react";
+import React, { lazy, Suspense, useEffect, useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.scss";
 import BackgroundLayout from "./components/background/BackgroundLayout";
@@ -14,6 +14,10 @@ const Skills = lazy(() => import("./pages/skills-page/Skills"));
 export const App = React.memo(function App() {
   const [mousePosition, setMousePosition] = useState({ x: null, y: null });
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isAppLoaded, setIsAppLoaded] = useState(false);
+  useEffect(() => {
+    setIsAppLoaded(true);
+  }, []);
 
   const onMouseMoveTranslate = (e) => {
     let x = e.clientX / 15;
@@ -34,26 +38,34 @@ export const App = React.memo(function App() {
   return (
     <BrowserRouter>
       <div className="app" onMouseMove={(e) => onMouseMoveTranslate(e)}>
-        <BackgroundLayout mousePosition={mousePosition} />
-        <ContactPage
-          closeContactForm={closeContactForm}
-          isModalOpen={isModalOpen}
-        />
-        <Header />
-        <div className="app__content">
-          <ContactList />
-          <main className="app__wrapper">
-            <Suspense fallback={<Preloader />}>
-              <Routes>
-                <Route
-                  path="/"
-                  element={<Home openContactForm={openContactForm} />}
-                />
-                <Route path="/skills" element={<Skills />} />
-                <Route path="/projects" element={<Projects />} />
-              </Routes>
-            </Suspense>
-          </main>
+        <div className={"loader" + (isAppLoaded ? " loader-hidden" : "")}></div>
+        <div
+          className={
+            "loader-after" + (isAppLoaded ? " loader-hidden" : "")
+          }
+        ></div>
+        <div className={"app-wrapper" + (isAppLoaded ? " loaded" : "")}>
+          <BackgroundLayout mousePosition={mousePosition} />
+          <ContactPage
+            closeContactForm={closeContactForm}
+            isModalOpen={isModalOpen}
+          />
+          <Header />
+          <div className="app__content">
+            <ContactList />
+            <main className="app__wrapper">
+              <Suspense fallback={<Preloader />}>
+                <Routes>
+                  <Route
+                    path="/"
+                    element={<Home openContactForm={openContactForm} />}
+                  />
+                  <Route path="/skills" element={<Skills />} />
+                  <Route path="/projects" element={<Projects />} />
+                </Routes>
+              </Suspense>
+            </main>
+          </div>
         </div>
       </div>
     </BrowserRouter>

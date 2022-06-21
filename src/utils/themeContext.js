@@ -15,11 +15,6 @@ class ThemeContextProvider extends Component {
       this.setState({ theme: "day" });
       localStorage.setItem("data-theme", "day");
     }
-    // this.setState((prevState) => {
-    //   return {
-    //     theme: prevState.theme === "day" ? "night" : "day",
-    //   };
-    // });
   };
 
   render() {

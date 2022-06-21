@@ -1,5 +1,35 @@
 @import '../../utils/styles.scss';
 
+@keyframes text-clip {
+  from {
+    clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
+  }
+
+  to {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
+
+@keyframes outer-left {
+  from {
+    transform: translateX(50%);
+  }
+
+  to {
+    transform: none;
+  }
+}
+
+@keyframes inner-left {
+  from {
+    transform: translateX(-50%);
+  }
+
+  to {
+    transform: none;
+  }
+}
+
 .main-hero {
   height: 100vh;
   width: 100%;
@@ -7,13 +37,19 @@
   display: flex;
   flex-direction: column;
 
-  &__content {
+  &__inner {
     width: 70%;
     margin-left: 100px;
     position: absolute;
     top: 30%;
     color: #fff;
     font-weight: bold;
+  }
+
+  &__content {
+    // width: 70%;
+    width: 100%;
+
   }
 
   &__image {
@@ -64,7 +100,7 @@
     justify-content: flex-start;
     align-items: center;
     cursor: pointer;
-    
+
     &_day {
       &::before {
         background: rgba($primary-day, .5);
@@ -137,5 +173,29 @@
     &:active {
       transform: scale(.96)
     }
+  }
+}
+
+@media (min-width: 1400px) {
+
+  .main-hero__title,
+  .main-hero__subtitle {
+    animation: outer-left 1s 2.5s cubic-bezier(0.5, 0, 0.1, 1) both;
+  }
+
+  .main-hero__content {
+    animation: inner-left 1s 2.5s ease both;
+  }
+
+  .main-hero__title-inner {
+    animation: text-clip 1s 1.5s cubic-bezier(0.5, 0, 0.1, 1) both;
+  }
+
+  .main-hero__subtitle-inner {
+    animation: text-clip 1s 1.5s cubic-bezier(0.5, 0, 0.1, 1) both;
+  }
+
+  .main-hero__inner {
+    animation: outer-left 1s 2.5s ease both;
   }
 }

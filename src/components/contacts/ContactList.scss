@@ -6,6 +6,15 @@
     left: 40px;
     bottom: 0;
     z-index: 10;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: all 1.8s ease;
+    transition-delay: 1.8s;
+
+    &.contact-list-loaded {
+      opacity: 1;
+      transform: translateY(0%);
+    }
 
     &::after {
       content: "";
@@ -30,6 +39,7 @@
 
 .contact {
   &__link {
+
     svg,
     path {
       transition: 0.2s all linear;

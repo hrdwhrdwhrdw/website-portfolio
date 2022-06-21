@@ -9,8 +9,12 @@
     height: 300px;
     margin: 0 auto;
     margin-bottom: 5rem;
+    transform: translateX(30%);
+    transition: all 1.5s ease;
+    transition-delay: 1.5s;
 
     &:nth-of-type(2n) {
+      transform: translateX(-30%);
       .project__image {
         left: auto;
         right: 0;
@@ -24,6 +28,12 @@
       .project__tech-list {
         align-self: start;
       }
+      &-loaded {
+      transform: translateX(0%);
+    }
+    }
+    &-loaded {
+      transform: translateX(0%) !important;
     }
   }
 

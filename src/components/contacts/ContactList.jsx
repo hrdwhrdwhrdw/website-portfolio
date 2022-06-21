@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import "./ContactList.scss";
 import { ReactComponent as Twitter } from "../../assets/contacts-icons/twitter.svg";
@@ -9,10 +9,14 @@ import { ReactComponent as Github } from "../../assets/contacts-icons/github.svg
 import { ThemeContextConsumer } from "../../utils/themeContext";
 
 const ContactList = () => {
+  const [isContactListLoaded, setIsContactListLoaded] = useState(false);
+  useEffect(() => {
+    setIsContactListLoaded(true);
+  }, []);
   return (
     <ThemeContextConsumer>
       {(context) => (
-        <ul className="contacts__list">
+        <ul className={"contacts__list" + (isContactListLoaded ? " contact-list-loaded" : "")}>
           <li className="contacts__item contact__item_twitter">
             <NavLink
               className={`contact__link contact__link_${context.theme}`}

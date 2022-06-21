@@ -9,17 +9,23 @@ const Home = ({ openContactForm }) => {
     <ThemeContextConsumer>
       {(context) => (
         <section className="main-hero">
-          <div className="main-hero__content">
-            <div className="main-hero__title">
-              <h1>Albert Gilmitdinov</h1>
+          <div className="main-hero__inner">
+            <div className="main-hero__content">
+              <div className="main-hero__title">
+                <h1 className="main-hero__title-inner">Albert Gilmitdinov</h1>
+              </div>
+              <div className="main-hero__subtitle">
+                <p className="main-hero__subtitle-inner">
+                  Junior Front-end Developer
+                </p>
+                <AboutButton openContactForm={openContactForm} />
+              </div>
             </div>
-            <div className="main-hero__subtitle">
-              <p>Junior Front-end Developer</p>
-            </div>
-            <AboutButton openContactForm={openContactForm} />
           </div>
           <div className="main-hero__image-block">
-            <Logo className={`main-hero__image main-hero__image_${context.theme}`} />
+            <Logo
+              className={`main-hero__image main-hero__image_${context.theme}`}
+            />
           </div>
         </section>
       )}
