@@ -10,6 +10,15 @@
 
   &__title {
     margin-bottom: 6rem;
+    opacity: 0;
+    transform: translateY(-100%);
+    transition: all 1.5s ease;
+    transition-delay: 1.5s;
+
+    &-loaded {
+      opacity: 1;
+      transform: translateY(0%);
+    }
   }
 
   h1 {

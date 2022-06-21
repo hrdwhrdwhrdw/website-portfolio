@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Skills.scss";
 
 import SkillsImage from "./skills-image/SkillsImage";
@@ -6,11 +6,20 @@ import SkillsDescriptions from "./skills-descriptions/SkillsDescriptions";
 import { ThemeContextConsumer } from "../../utils/themeContext";
 
 const Skills = () => {
+  const [isSkillsTitleLoaded, setIsSkillsTitleLoaded] = useState(false);
+  useEffect(() => {
+    setIsSkillsTitleLoaded(true);
+  }, []);
   return (
     <ThemeContextConsumer>
       {(context) => (
         <section className="skills">
-          <div className="skills__title">
+          <div
+            className={
+              "skills__title" +
+              (isSkillsTitleLoaded ? " skills__title-loaded" : "")
+            }
+          >
             <div className={`section-title section-title_${context.theme}`}>
               <h1>WHAT CAN I DO...</h1>
               <h1>WHAT CAN I DO...</h1>
