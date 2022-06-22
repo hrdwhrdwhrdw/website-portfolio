@@ -36,6 +36,7 @@
     transition: all 1.5s ease;
     transition-delay: 2s;
     opacity: 0;
+
     &-loaded {
       opacity: 1;
     }
@@ -141,8 +142,8 @@
   width: 86%;
 
   svg {
-    width: 3rem;
-    height: 3rem;
+    width: 5rem;
+    height: 5rem;
     fill: #fff;
   }
 
@@ -249,12 +250,60 @@
     top: -11%;
 
     &__block {
-      height: 120px;
+      height: 180px;
       width: 40%;
       position: static;
       align-items: center;
       justify-content: center;
       margin-bottom: 20px;
+
+      &_front-skills {
+        transform: translateX(-20%);
+        transition: all 1.5s ease;
+        transition-delay: 2.1s;
+        opacity: 0;
+
+        &-loaded {
+          transform: translateX(0%) !important;
+          opacity: 1;
+        }
+      }
+
+      &_debugging {
+        transform: translateX(-20%);
+        transition: all 1.5s ease;
+        transition-delay: 2.5s;
+        opacity: 0;
+
+        &-loaded {
+          transform: translateX(0%);
+          opacity: 1;
+        }
+      }
+
+      &_responsive-web {
+        transform: translateX(-20%);
+        transition: all 1.5s ease;
+        transition-delay: 2.9s;
+        opacity: 0;
+
+        &-loaded {
+          transform: translateX(0%);
+          opacity: 1;
+        }
+      }
+
+      &_fix-bugs {
+        transform: translateX(-20%);
+        transition: all 1.5s ease;
+        transition-delay: 3.3s;
+        opacity: 0;
+
+        &-loaded {
+          transform: translateX(0%);
+          opacity: 1;
+        }
+      }
     }
   }
 }
@@ -271,7 +320,7 @@
       width: 80%;
 
       p {
-        font-size: 1.3rem;
+        font-size: 1.7rem;
       }
     }
   }
