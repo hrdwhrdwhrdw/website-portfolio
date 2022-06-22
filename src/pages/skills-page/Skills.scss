@@ -33,6 +33,12 @@
     width: 80%;
     padding-top: 50%;
     margin: 2rem auto;
+    transition: all 1.5s ease;
+    transition-delay: 2s;
+    opacity: 0;
+    &-loaded {
+      opacity: 1;
+    }
 
     &-wrapper {
       width: 100%;
@@ -154,10 +160,12 @@
     font-size: 15px;
     border-radius: 10px;
     z-index: 3;
+
     p {
       font-size: .9rem;
     }
-    &_day{
+
+    &_day {
       background-color: $primary-day;
       border: 4px solid $primary-day;
       box-shadow: $primary-day 0px 2px 4px 0px, $primary-day 0px 2px 16px 0px;
@@ -165,32 +173,68 @@
 
     &_night {
       background-color: $secondary-night;
-    border: 4px solid $primary-night;
-    box-shadow: $primary-night 0px 2px 4px 0px, $primary-night 0px 2px 16px 0px;
+      border: 4px solid $primary-night;
+      box-shadow: $primary-night 0px 2px 4px 0px, $primary-night 0px 2px 16px 0px;
     }
 
     p {
-      text-shadow: 2px 2px 3px rgba(255,255,255,0.5);
+      text-shadow: 2px 2px 3px rgba(255, 255, 255, 0.5);
     }
 
     &_front-skills {
       top: 0%;
       left: calc(50% - 15%);
+      transform: translateY(-30%);
+      transition: all 1.5s ease;
+      transition-delay: 2s;
+      opacity: 0;
+
+      &-loaded {
+        transform: translateX(0%) !important;
+        opacity: 1;
+      }
     }
 
     &_debugging {
       top: calc(50% - 100px);
       left: 0;
+      transform: translateX(-30%);
+      transition: all 1.5s ease;
+      transition-delay: 2s;
+      opacity: 0;
+
+      &-loaded {
+        transform: translateX(0%);
+        opacity: 1;
+      }
     }
 
     &_responsive-web {
       top: calc(50% - 100px);
       right: 0;
+      transform: translateX(30%);
+      transition: all 1.5s ease;
+      transition-delay: 2s;
+      opacity: 0;
+
+      &-loaded {
+        transform: translateX(0%);
+        opacity: 1;
+      }
     }
 
     &_fix-bugs {
       bottom: 0%;
       left: calc(50% - 15%);
+      transform: translateY(30%);
+      transition: all 1.5s ease;
+      transition-delay: 2s;
+      opacity: 0;
+
+      &-loaded {
+        transform: translateX(0%);
+        opacity: 1;
+      }
     }
   }
 }
@@ -203,6 +247,7 @@
     align-items: center;
     height: auto;
     top: -11%;
+
     &__block {
       height: 120px;
       width: 40%;
@@ -220,9 +265,11 @@
       display: none;
     }
   }
+
   .descriptions {
     &__block {
       width: 80%;
+
       p {
         font-size: 1.3rem;
       }

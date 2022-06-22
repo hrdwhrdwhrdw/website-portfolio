@@ -11,7 +11,8 @@
     margin-bottom: 5rem;
     transform: translateX(30%);
     transition: all 1.5s ease;
-    transition-delay: 1.5s;
+    transition-delay: 2s;
+    opacity: 0;
 
     &:nth-of-type(2n) {
       transform: translateX(-30%);
@@ -37,6 +38,7 @@
 
     &-loaded {
       transform: translateX(0%) !important;
+      opacity: 1;
     }
   }
 
