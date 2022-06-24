@@ -27,6 +27,17 @@ const Home = ({ openContactForm }) => {
               className={`main-hero__image main-hero__image_${context.theme}`}
             />
           </div>
+          <div class="animated-title">
+            <div class="text-top">
+              <div>
+                <span>mimicking</span>
+                <span>apple's design</span>
+              </div>
+            </div>
+            <div class="text-bottom">
+              <div>for the win!</div>
+            </div>
+          </div>
         </section>
       )}
     </ThemeContextConsumer>

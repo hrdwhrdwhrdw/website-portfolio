@@ -1,5 +1,25 @@
 @import '../../utils/styles.scss';
 
+@keyframes descGoRight {
+  0% { transform: translateX(-30%);}
+  100% { transform: translateX(0%); opacity: 1;}
+}
+@keyframes descGoLeft {
+  0% { transform: translateX(30%);}
+  100% { transform: translateX(0%); opacity: 1;}
+}
+@keyframes descGoUp {
+  0% { transform: translateY(-30%);}
+  100% { transform: translateX(0%); opacity: 1;}
+}
+@keyframes descGoDown {
+  0% { transform: translateY(30%);}
+  100% { transform: translateX(0%); opacity: 1;}
+}
+@keyframes showSkillsImage {
+  100% { opacity: 1;}
+}
+
 .skills {
   padding: 0;
   padding-top: 15vh;
@@ -11,14 +31,7 @@
   &__title {
     margin-bottom: 6rem;
     opacity: 0;
-    transform: translateY(-100%);
-    transition: all 1.5s ease;
-    transition-delay: 1.5s;
-
-    &-loaded {
-      opacity: 1;
-      transform: translateY(0%);
-    }
+    animation: downUpTitle 1.5s 1.5s forwards;
   }
 
   h1 {
@@ -33,13 +46,8 @@
     width: 80%;
     padding-top: 50%;
     margin: 2rem auto;
-    transition: all 1.5s ease;
-    transition-delay: 2s;
+    animation: showSkillsImage 1.5s 1.5s forwards;
     opacity: 0;
-
-    &-loaded {
-      opacity: 1;
-    }
 
     &-wrapper {
       width: 100%;
@@ -161,6 +169,31 @@
     font-size: 15px;
     border-radius: 10px;
     z-index: 3;
+    opacity: 0;
+
+    &_front-skills {
+      top: 0%;
+      left: calc(50% - 15%);
+      animation: descGoUp 1.5s 1.5s forwards;
+    }
+
+    &_debugging {
+      top: calc(50% - 100px);
+      left: 0;
+      animation: descGoRight 1.5s 1.5s forwards;
+    }
+
+    &_responsive-web {
+      top: calc(50% - 100px);
+      right: 0;
+      animation: descGoLeft 1.5s 1.5s forwards;
+    }
+
+    &_fix-bugs {
+      bottom: 0%;
+      left: calc(50% - 15%);
+      animation: descGoDown 1.5s 1.5s forwards;
+    }
 
     p {
       font-size: .9rem;
@@ -182,61 +215,7 @@
       text-shadow: 2px 2px 3px rgba(255, 255, 255, 0.5);
     }
 
-    &_front-skills {
-      top: 0%;
-      left: calc(50% - 15%);
-      transform: translateY(-30%);
-      transition: all 1.5s ease;
-      transition-delay: 2s;
-      opacity: 0;
-
-      &-loaded {
-        transform: translateX(0%) !important;
-        opacity: 1;
-      }
-    }
-
-    &_debugging {
-      top: calc(50% - 100px);
-      left: 0;
-      transform: translateX(-30%);
-      transition: all 1.5s ease;
-      transition-delay: 2s;
-      opacity: 0;
-
-      &-loaded {
-        transform: translateX(0%);
-        opacity: 1;
-      }
-    }
-
-    &_responsive-web {
-      top: calc(50% - 100px);
-      right: 0;
-      transform: translateX(30%);
-      transition: all 1.5s ease;
-      transition-delay: 2s;
-      opacity: 0;
-
-      &-loaded {
-        transform: translateX(0%);
-        opacity: 1;
-      }
-    }
-
-    &_fix-bugs {
-      bottom: 0%;
-      left: calc(50% - 15%);
-      transform: translateY(30%);
-      transition: all 1.5s ease;
-      transition-delay: 2s;
-      opacity: 0;
-
-      &-loaded {
-        transform: translateX(0%);
-        opacity: 1;
-      }
-    }
+    
   }
 }
 

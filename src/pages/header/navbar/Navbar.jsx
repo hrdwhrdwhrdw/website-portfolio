@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import { ThemeContextConsumer } from "../../../utils/themeContext";
 import "./Navbar.scss";
 
-const Navbar = ({ isNavExpanded }) => {
+const Navbar = ({ isNavExpanded, shrinkNav }) => {
   
   return (
     <ThemeContextConsumer>
@@ -19,6 +19,7 @@ const Navbar = ({ isNavExpanded }) => {
               <NavLink
                 className={`nav__link nav__link_${context.theme}`}
                 to="/"
+                onClick={() => shrinkNav()}
               >
                 Home
               </NavLink>
@@ -27,6 +28,7 @@ const Navbar = ({ isNavExpanded }) => {
               <NavLink
                 className={`nav__link nav__link_${context.theme}`}
                 to="/skills"
+                onClick={() => shrinkNav()}
               >
                 Skills
               </NavLink>
@@ -35,6 +37,7 @@ const Navbar = ({ isNavExpanded }) => {
               <NavLink
                 className={`nav__link nav__link_${context.theme}`}
                 to="/projects"
+                onClick={() => shrinkNav()}
               >
                 Projects
               </NavLink>

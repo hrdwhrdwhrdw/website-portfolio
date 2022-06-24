@@ -1,5 +1,10 @@
 @import './utils/styles.scss';
 
+@keyframes downUpTitle {
+  0% { transform: translateY(-100%);}
+  100% { transform: translateY(0%); opacity: 1;}
+}
+
 .app {
   width: 100%;
   position: relative;

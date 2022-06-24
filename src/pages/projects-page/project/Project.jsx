@@ -1,18 +1,14 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import "./Project.scss";
 import { ReactComponent as GithubLink } from "../../../assets/githubLink.svg";
 import { ReactComponent as Link } from "../../../assets/link.svg";
 import { ThemeContextConsumer } from "../../../utils/themeContext";
 
 export default function Project({ project }) {
-  const [isProjectLoaded, setIsProjectLoaded] = useState(false);
-  useEffect(() => {
-    setIsProjectLoaded(true);
-  }, []);
   return (
     <ThemeContextConsumer>
       {(context) => (
-        <div className={"project__item" + (isProjectLoaded ? " project__item-loaded" : "")}>
+        <div className={"project__item"}>
           <div className="project__image">
             <img
               src={require("../../../assets/projects-images/website.jpg")}

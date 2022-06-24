@@ -1,5 +1,15 @@
 @import '../../../utils/styles.scss';
 
+
+@keyframes showProjectItemsLeft {
+  0% { transform: translateX(30%);}
+  100% { transform: translateX(0%); opacity: 1;}
+}
+@keyframes showProjectItemsRight {
+  0% { transform: translateX(-30%);}
+  100% { transform: translateX(0%); opacity: 1;}
+}
+
 .project {
   &__item {
     position: relative;
@@ -9,14 +19,11 @@
     height: 300px;
     margin: 0 auto;
     margin-bottom: 5rem;
-    transform: translateX(30%);
-    transition: all 1.5s ease;
-    transition-delay: 2s;
     opacity: 0;
+    animation: showProjectItemsRight 1.5s 1.5s forwards;
 
     &:nth-of-type(2n) {
-      transform: translateX(-30%);
-
+      animation: showProjectItemsLeft 1.5s 1.5s forwards;
       .project__image {
         left: auto;
         right: 0;
@@ -30,15 +37,6 @@
       .project__tech-list {
         align-self: start;
       }
-
-      &-loaded {
-        transform: translateX(0%);
-      }
-    }
-
-    &-loaded {
-      transform: translateX(0%) !important;
-      opacity: 1;
     }
   }
 
@@ -92,7 +90,6 @@
 
     &_day {
       background-color: $primary-day;
-
     }
 
     &_night {

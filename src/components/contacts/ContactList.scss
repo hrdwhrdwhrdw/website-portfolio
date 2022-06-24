@@ -1,5 +1,16 @@
 @import '../../utils//styles.scss';
 
+@keyframes contactListGoUp {
+  0% {
+    transform: translateY(100%);
+  }
+
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
 .contacts {
   &__list {
     position: fixed;
@@ -7,14 +18,7 @@
     bottom: 0;
     z-index: 10;
     opacity: 0;
-    transform: translateY(100%);
-    transition: all 1.8s ease;
-    transition-delay: 1.8s;
-
-    &.contact-list-loaded {
-      opacity: 1;
-      transform: translateY(0%);
-    }
+    animation: contactListGoUp 1.5s 1.5s forwards;
 
     &::after {
       content: "";

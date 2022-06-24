@@ -1,4 +1,4 @@
-import React, {useEffect, useState } from "react";
+import React, { useState } from "react";
 import Navbar from "./navbar/Navbar";
 import "./Header.scss";
 import { ReactComponent as Logo } from "../../assets/logo.svg";
@@ -8,11 +8,6 @@ import { ThemeContextConsumer } from "../../utils/themeContext";
 
 const Header = ({ isModalOpen }) => {
   let [isNavExpanded, setIsNavExpanded] = useState(false);
-  
-  const [isHeaderLoaded, setIsHeaderLoaded] = useState(false);
-  useEffect(() => {
-    setIsHeaderLoaded(true);
-  }, []);
 
   const expandNav = () => {
     setIsNavExpanded(true);
@@ -25,13 +20,16 @@ const Header = ({ isModalOpen }) => {
   return (
     <ThemeContextConsumer>
       {(context) => (
-        <header className={"header" + (isHeaderLoaded ? " header-loaded" : "")}>
+        <header className={"header"}>
           {!isModalOpen && (
             <>
               <Logo className="header__logo" />
-              <Navbar isNavExpanded={isNavExpanded} />
+              <Navbar isNavExpanded={isNavExpanded} shrinkNav={shrinkNav} />
               {!isNavExpanded && (
-                <ToggleThemeButton toggleTheme={context.toggleTheme} theme={context.theme}/>
+                <ToggleThemeButton
+                  toggleTheme={context.toggleTheme}
+                  theme={context.theme}
+                />
               )}
               {!isNavExpanded && <ResumeButton />}
               {isNavExpanded ? (
