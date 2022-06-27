@@ -1,5 +1,6 @@
 @import '../../utils/styles.scss';
 
+
 @keyframes text-clip {
   from {
     clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
@@ -177,82 +178,50 @@
 
 @media (min-width: 1024px) {
 
-  .main-hero__title,
-  .main-hero__subtitle {
+  .main-hero__title[data-animation='1,5s'],
+  .main-hero__subtitle[data-animation='1,5s'] {
+    animation: outer-left 1s 1.5s cubic-bezier(0.5, 0, 0.1, 1) both;
+  }
+
+  .main-hero__title[data-animation='2,5s'],
+  .main-hero__subtitle[data-animation='2,5s'] {
+    animation: outer-left 1s 1.5s cubic-bezier(0.5, 0, 0.1, 1) both;
     animation: outer-left 1s 2.5s cubic-bezier(0.5, 0, 0.1, 1) both;
   }
 
-  .main-hero__content {
+  .main-hero__content[data-animation='1,5s'] {
+    animation: inner-left 1s 1.5s ease both;
+  }
+
+  .main-hero__content[data-animation='2,5s'] {
+    animation: inner-left 1s 1.5s ease both;
     animation: inner-left 1s 2.5s ease both;
   }
 
-  .main-hero__title-inner {
+  .main-hero__title-inner[data-animation='0,5s'] {
+    animation: text-clip 1s 0.5s cubic-bezier(0.5, 0, 0.1, 1) both;
+  }
+
+  .main-hero__title-inner[data-animation='1,5s'] {
+    animation: text-clip 1s 0.5s cubic-bezier(0.5, 0, 0.1, 1) both;
     animation: text-clip 1s 1.5s cubic-bezier(0.5, 0, 0.1, 1) both;
   }
 
-  .main-hero__subtitle-inner {
+  .main-hero__subtitle-inner[data-animation='0,5s'] {
+    animation: text-clip 1s 0.5s cubic-bezier(0.5, 0, 0.1, 1) both;
+  }
+
+  .main-hero__subtitle-inner[data-animation='1,5s'] {
+    animation: text-clip 1s 0.5s cubic-bezier(0.5, 0, 0.1, 1) both;
     animation: text-clip 1s 1.5s cubic-bezier(0.5, 0, 0.1, 1) both;
   }
 
-  .main-hero__inner {
+  .main-hero__inner[data-animation='1,5s'] {
+    animation: outer-left 1s 1.5s ease both;
+  }
+
+  .main-hero__inner[data-animation='2,5s'] {
+    animation: outer-left 1s 1.5s ease both;
     animation: outer-left 1s 2.5s ease both;
   }
-}
-
-@import url('https://fonts.googleapis.com/css?family=Roboto:700');
-@keyframes showTopText {
-  0% { transform: translate3d(0, 100%, 0); }
-  40%, 60% { transform: translate3d(0, 50%, 0); }
-  100% { transform: translate3d(0, 0, 0); }
-}
-@keyframes showBottomText {
-  0% { transform: translate3d(0, -100%, 0); }
-  100% { transform: translate3d(0, 0, 0); }
-}
-.animated-title {
-  color: #222;
-  font-family: Roboto, Arial, sans-serif;
-  height: 90vmin;
-  left: 50%;
-  position: absolute;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: 90vmin;
-}
-.animated-title > div {
-  height: 50%;
-  overflow: hidden;
-  position: absolute;
-  width: 100%;
-}
-.animated-title > div div {
-  font-size: 12vmin;
-  padding: 2vmin 0;
-  position: absolute;
-}
-.animated-title > div div span {
-  display: block;
-}
-.animated-title > div.text-top {
-  top: 0;
-}
-.animated-title > div.text-top div {
-  animation: showTopText 1s;
-  animation-delay: 0.5s;
-  animation-fill-mode: forwards;
-  bottom: 0;
-  transform: translate(0, 100%);
-}
-.animated-title > div.text-top div span:first-child {
-  color: #767676;
-}
-.animated-title > div.text-bottom {
-  bottom: 0;
-}
-.animated-title > div.text-bottom div {
-  animation: showBottomText 0.5s;
-  animation-delay: 1.75s;
-  animation-fill-mode: forwards;
-  top: 0;
-  transform: translate(0, -100%);
 }

@@ -20,10 +20,10 @@
     margin: 0 auto;
     margin-bottom: 5rem;
     opacity: 0;
-    animation: showProjectItemsRight 1.5s 1.5s forwards;
+    animation: showProjectItemsRight 1.5s 1s forwards;
 
     &:nth-of-type(2n) {
-      animation: showProjectItemsLeft 1.5s 1.5s forwards;
+      animation: showProjectItemsLeft 1.5s 1s forwards;
       .project__image {
         left: auto;
         right: 0;

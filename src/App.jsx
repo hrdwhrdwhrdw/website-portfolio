@@ -12,9 +12,17 @@ const Projects = lazy(() => import("./pages/projects-page/Projects"));
 const Skills = lazy(() => import("./pages/skills-page/Skills"));
 
 export const App = React.memo(function App() {
+  const [initialize, setInitialize] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setInitialize(true);
+    }, 3500);
+  }, [initialize]);
   const [mousePosition, setMousePosition] = useState({ x: null, y: null });
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isAppLoaded, setIsAppLoaded] = useState(false);
+
   useEffect(() => {
     setIsAppLoaded(true);
   }, []);
@@ -40,9 +48,7 @@ export const App = React.memo(function App() {
       <div className="app" onMouseMove={(e) => onMouseMoveTranslate(e)}>
         <div className={"loader" + (isAppLoaded ? " loader-hidden" : "")}></div>
         <div
-          className={
-            "loader-after" + (isAppLoaded ? " loader-hidden" : "")
-          }
+          className={"loader-after" + (isAppLoaded ? " loader-hidden" : "")}
         ></div>
         <div className={"app-wrapper" + (isAppLoaded ? " loaded" : "")}>
           <BackgroundLayout mousePosition={mousePosition} />
@@ -58,7 +64,12 @@ export const App = React.memo(function App() {
                 <Routes>
                   <Route
                     path="/"
-                    element={<Home openContactForm={openContactForm} />}
+                    element={
+                      <Home
+                        openContactForm={openContactForm}
+                        initialize={initialize}
+                      />
+                    }
                   />
                   <Route path="/skills" element={<Skills />} />
                   <Route path="/projects" element={<Projects />} />

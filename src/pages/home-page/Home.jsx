@@ -4,18 +4,38 @@ import { ReactComponent as Logo } from "../../assets/gradient-logo.svg";
 import AboutButton from "./about-button/AboutButton";
 import { ThemeContextConsumer } from "../../utils/themeContext";
 
-const Home = ({ openContactForm }) => {
+const Home = ({ openContactForm, initialize }) => {
   return (
     <ThemeContextConsumer>
       {(context) => (
         <section className="main-hero">
-          <div className="main-hero__inner">
-            <div className="main-hero__content">
-              <div className="main-hero__title">
-                <h1 className="main-hero__title-inner">Albert Gilmitdinov</h1>
+          <div
+            className="main-hero__inner"
+            data-animation={initialize ? "1,5s" : "2,5s"}
+          >
+            <div
+              className="main-hero__content"
+              data-animation={initialize ? "1,5s" : "2,5s"}
+            >
+              <div
+                className="main-hero__title"
+                data-animation={initialize ? "1,5s" : "2,5s"}
+              >
+                <h1
+                  className="main-hero__title-inner"
+                  data-animation={initialize ? "0,5s" : "1,5s"}
+                >
+                  Albert Gilmitdinov
+                </h1>
               </div>
-              <div className="main-hero__subtitle">
-                <p className="main-hero__subtitle-inner">
+              <div
+                className="main-hero__subtitle"
+                data-animation={initialize ? "1,5s" : "2,5s"}
+              >
+                <p
+                  className="main-hero__subtitle-inner"
+                  data-animation={initialize ? "0,5s" : "1,5s"}
+                >
                   Junior Front-end Developer
                 </p>
                 <AboutButton openContactForm={openContactForm} />
@@ -27,17 +47,7 @@ const Home = ({ openContactForm }) => {
               className={`main-hero__image main-hero__image_${context.theme}`}
             />
           </div>
-          <div class="animated-title">
-            <div class="text-top">
-              <div>
-                <span>mimicking</span>
-                <span>apple's design</span>
-              </div>
-            </div>
-            <div class="text-bottom">
-              <div>for the win!</div>
-            </div>
-          </div>
+          
         </section>
       )}
     </ThemeContextConsumer>

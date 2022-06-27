@@ -31,7 +31,7 @@
   &__title {
     margin-bottom: 6rem;
     opacity: 0;
-    animation: downUpTitle 1.5s 1.5s forwards;
+    animation: downUpTitle 1.5s 0.5s forwards;
   }
 
   h1 {
@@ -46,7 +46,7 @@
     width: 80%;
     padding-top: 50%;
     margin: 2rem auto;
-    animation: showSkillsImage 1.5s 1.5s forwards;
+    animation: showSkillsImage 1.5s 1s forwards;
     opacity: 0;
 
     &-wrapper {
