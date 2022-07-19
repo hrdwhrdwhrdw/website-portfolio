@@ -5,10 +5,10 @@ export const store = {
       title: "Portfolio website",
       description:
         "A browser-based single page application to showcase my pet projects.",
-      image: "../../../assets/projects-images/website.jpg",
+      image: "https://i.ibb.co/HxPKRC1/website.png",
       links: {
-        github: "",
-        website: "",
+        github: "https://github.com/hrdwhrdwhrdw/website-portfolio",
+        website: "http://albertgilmitdinov.ru/",
       },
       techList: [
         "React",
@@ -24,10 +24,10 @@ export const store = {
       title: "Messenger",
       description:
         "Front-end part of a web application, is a simplified analogue of a full-fledged messenger. The chat is developed on React + Redux + TypeScript.",
-      image: "../../../assets/projects-images/website.jpg",
+      image: "https://i.ibb.co/FJZ09Z3/mes.png",
       links: {
-        github: "",
-        website: "",
+        github: "https://github.com/hrdwhrdwhrdw/messenger",
+        website: "https://hrdwhrdwhrdw.github.io/messenger/",
       },
       techList: [
         "React",
@@ -48,9 +48,9 @@ export const store = {
       title: "Cloud Disk",
       description:
         "A front-end part of a simplified analogue of the cloudmail cloud service, developed on the MERN stack (MongoDB, Express.js, React, Node.js.) in order to understand at a basic level how the back-end works and how to work with the database.",
-      image: "../../../assets/projects-images/website.jpg",
+      image: "https://i.ibb.co/fdHrZ2P/cloud.jpg",
       links: {
-        github: "",
+        github: "https://github.com/hrdwhrdwhrdw/cloud-disk",
         website: "",
       },
       techList: [
@@ -70,10 +70,10 @@ export const store = {
       title: "Todo App",
       description:
         "It was from these projects that I began my acquaintance with React and the practical basics of Javascript. These are the simplest applications I wrote in order to learn the basics of React, customizing them by SCSS.",
-      image: "../../../assets/projects-images/website.jpg",
+      image: "https://i.ibb.co/hf5FLRq/todoimg.jpg",
       links: {
-        github: "",
-        website: "",
+        github: "https://github.com/hrdwhrdwhrdw/todo",
+        website: "https://hrdwhrdwhrdw.github.io/todo/",
       },
       techList: [
         "React",
@@ -89,10 +89,10 @@ export const store = {
       title: "Tic-Tac-Toe",
       description:
         "It was from these projects that I began my acquaintance with React and the practical basics of Javascript. These are the simplest applications I wrote in order to learn the basics of React, customizing them by SCSS.",
-      image: "../../../assets/projects-images/website.jpg",
+      image: "https://i.ibb.co/BKtQJ96/tic-tac-toe.png",
       links: {
-        github: "dwd",
-        website: "",
+        github: "https://github.com/hrdwhrdwhrdw/tic-tac-toe",
+        website: "https://hrdwhrdwhrdw.github.io/tic-tac-toe/",
       },
       techList: [
         "React",

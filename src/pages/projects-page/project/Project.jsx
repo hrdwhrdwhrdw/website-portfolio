@@ -11,7 +11,8 @@ export default function Project({ project }) {
         <div className={"project__item"}>
           <div className="project__image">
             <img
-              src={require("../../../assets/projects-images/website.jpg")}
+              src={project.image}
+              // src={require("../../../assets/projects-images/website.jpg")}
               alt=""
             />
           </div>
@@ -26,10 +27,10 @@ export default function Project({ project }) {
               ))}
             </div>
             <div className={`project__links project__links_${context.theme}`}>
-              <a href={project.links.github}>
+              <a href={project.links.github} target="_blank" rel="noreferrer">
                 <GithubLink />
               </a>
-              <a href={project.links.website}>
+              <a href={project.links.website} target="_blank" rel="noreferrer">
                 <Link />
               </a>
             </div>

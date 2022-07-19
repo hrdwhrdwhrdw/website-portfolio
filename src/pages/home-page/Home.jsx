@@ -38,7 +38,10 @@ const Home = ({ openContactForm, initialize }) => {
                 >
                   Junior Front-end Developer
                 </p>
-                <AboutButton openContactForm={openContactForm} />
+                <AboutButton
+                  initialize={initialize}
+                  openContactForm={openContactForm}
+                />
               </div>
             </div>
           </div>
@@ -47,7 +50,6 @@ const Home = ({ openContactForm, initialize }) => {
               className={`main-hero__image main-hero__image_${context.theme}`}
             />
           </div>
-          
         </section>
       )}
     </ThemeContextConsumer>

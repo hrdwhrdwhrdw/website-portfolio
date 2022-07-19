@@ -15,20 +15,22 @@ const AboutInfo = ({ isModalOpen }) => {
           <div className="half-contact__wrapper half-contact__wrapper_about">
             <div className="half-contact__info-block">
               <div className="half-contact__title">
-                <h2>Something about me ;p</h2>
+                <h2>About me:</h2>
               </div>
               <div className="half-contact__subtitle">
                 <h4>Frontend-developer</h4>
               </div>
               <div className="half-contact__about-info">
                 <p>
-                  I'm Albert Gilmitdinov, a 22-year-old junior front-end
-                  developer. I'm a weird guy who likes making weird things with
-                  web technologies. I like to resolve design problems, create
-                  smart user interface and imagine useful interaction,
-                  developing rich web experiences & web applications. When not
-                  working or futzing around with code, I study how to escape
-                  from University.
+                Hi! My name is Albert. I'm beginner front-end developer. I have
+been studying programming for 9 months. I draw information
+from various sources: tutorials, blogs, video tutorials,
+conferences, and, of course, white papers.I decided to go into
+programming professionally to design and maintain complex
+systems, and I consider web development to be a promising
+direction to start in this area. I am attracted by the opportunity
+to apply rational thinking in my work and at the same time see
+a concrete result. 
                 </p>
               </div>
             </div>

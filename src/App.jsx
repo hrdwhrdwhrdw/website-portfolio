@@ -27,6 +27,10 @@ export const App = React.memo(function App() {
     setIsAppLoaded(true);
   }, []);
 
+  useEffect(() => {
+    document.title = 'Albert Gilmitdinov';
+  });
+
   const onMouseMoveTranslate = (e) => {
     let x = e.clientX / 15;
     let y = e.clientY / 15;

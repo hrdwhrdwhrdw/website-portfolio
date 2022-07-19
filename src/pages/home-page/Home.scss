@@ -1,6 +1,5 @@
 @import '../../utils/styles.scss';
 
-
 @keyframes text-clip {
   from {
     clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
@@ -101,6 +100,14 @@
     align-items: center;
     cursor: pointer;
 
+    &[data-animation='0,5s'] {
+      animation: text-clip 1s 0.5s cubic-bezier(0.5, 0, 0.1, 1) both;
+    }
+
+    &[data-animation='1,5s'] {
+      animation: text-clip 1s 1.5s cubic-bezier(0.5, 0, 0.1, 1) both;
+    }
+
     &_day {
       &::before {
         background: rgba($primary-day, .5);
@@ -176,52 +183,54 @@
   }
 }
 
-@media (min-width: 1024px) {
 
-  .main-hero__title[data-animation='1,5s'],
-  .main-hero__subtitle[data-animation='1,5s'] {
-    animation: outer-left 1s 1.5s cubic-bezier(0.5, 0, 0.1, 1) both;
-  }
+.main-hero__title[data-animation='1,5s'],
+.main-hero__subtitle[data-animation='1,5s'] {
+  animation: outer-left 1s 1.5s cubic-bezier(0.5, 0, 0.1, 1) both;
+}
 
-  .main-hero__title[data-animation='2,5s'],
-  .main-hero__subtitle[data-animation='2,5s'] {
-    animation: outer-left 1s 1.5s cubic-bezier(0.5, 0, 0.1, 1) both;
-    animation: outer-left 1s 2.5s cubic-bezier(0.5, 0, 0.1, 1) both;
-  }
+.main-hero__title[data-animation='2,5s'],
+.main-hero__subtitle[data-animation='2,5s'] {
+  animation: outer-left 1s 2.5s cubic-bezier(0.5, 0, 0.1, 1) both;
+}
 
-  .main-hero__content[data-animation='1,5s'] {
-    animation: inner-left 1s 1.5s ease both;
-  }
+.main-hero__content[data-animation='1,5s'] {
+  animation: inner-left 1s 1.5s ease both;
+}
 
-  .main-hero__content[data-animation='2,5s'] {
-    animation: inner-left 1s 1.5s ease both;
-    animation: inner-left 1s 2.5s ease both;
-  }
+.main-hero__content[data-animation='2,5s'] {
+  animation: inner-left 1s 2.5s ease both;
+}
 
-  .main-hero__title-inner[data-animation='0,5s'] {
-    animation: text-clip 1s 0.5s cubic-bezier(0.5, 0, 0.1, 1) both;
-  }
+.main-hero__title-inner[data-animation='0,5s'] {
+  animation: text-clip 1s 0.5s cubic-bezier(0.5, 0, 0.1, 1) both;
+}
 
-  .main-hero__title-inner[data-animation='1,5s'] {
-    animation: text-clip 1s 0.5s cubic-bezier(0.5, 0, 0.1, 1) both;
-    animation: text-clip 1s 1.5s cubic-bezier(0.5, 0, 0.1, 1) both;
-  }
+.main-hero__title-inner[data-animation='1,5s'] {
+  animation: text-clip 1s 1.5s cubic-bezier(0.5, 0, 0.1, 1) both;
+}
 
-  .main-hero__subtitle-inner[data-animation='0,5s'] {
-    animation: text-clip 1s 0.5s cubic-bezier(0.5, 0, 0.1, 1) both;
-  }
+.main-hero__subtitle-inner[data-animation='0,5s'] {
+  animation: text-clip 1s 0.5s cubic-bezier(0.5, 0, 0.1, 1) both;
+}
 
-  .main-hero__subtitle-inner[data-animation='1,5s'] {
-    animation: text-clip 1s 0.5s cubic-bezier(0.5, 0, 0.1, 1) both;
-    animation: text-clip 1s 1.5s cubic-bezier(0.5, 0, 0.1, 1) both;
-  }
+.main-hero__subtitle-inner[data-animation='1,5s'] {
+  animation: text-clip 1s 1.5s cubic-bezier(0.5, 0, 0.1, 1) both;
+}
 
-  .main-hero__inner[data-animation='1,5s'] {
-    animation: outer-left 1s 1.5s ease both;
-  }
+.main-hero__inner[data-animation='1,5s'] {
+  animation: outer-left 1s 1.5s ease both;
+}
 
-  .main-hero__inner[data-animation='2,5s'] {
-    animation: outer-left 1s 1.5s ease both;
-    animation: outer-left 1s 2.5s ease both;
+.main-hero__inner[data-animation='2,5s'] {
+  animation: outer-left 1s 2.5s ease both;
+}
+
+@media (max-width: 450px) {
+  .main-hero {
+    &__inner {
+      margin-left: 30px;
+      width: 68%;
+    }
   }
 }
